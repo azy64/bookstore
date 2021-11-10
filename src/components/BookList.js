@@ -14,16 +14,17 @@ class BookList extends Component {
     const { books } = this.props;
     books.map((item) => {
       tmp.push(
-        <div>
-          <h3>
-            $
+        <div key={item.id}>
+          <span>
             {item.title}
-          </h3>
+          </span>
           <button type="button" id={item.id}>Remove</button>
+          <br />
         </div>,
       );
       return item;
     });
+    return tmp;
   }
 
   render() {
@@ -40,7 +41,7 @@ class BookList extends Component {
 }
 
 BookList.propTypes = {
-  books: PropTypes.objectOf(Array).isRequired,
+  books: PropTypes.instanceOf(Array).isRequired,
 };
 const mapStateToProps = (state) => state;
 export default connect(mapStateToProps)(BookList);
