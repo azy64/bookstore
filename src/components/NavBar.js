@@ -6,8 +6,8 @@ export default function NavBar() {
     <nav className="menu">
       <ul>
         <li>
-          <NavLink exact to="/">Books</NavLink>
-          <NavLink exact to="/categories">Categories</NavLink>
+          <NavLink to="/">Books</NavLink>
+          <NavLink to="/categories">Categories</NavLink>
         </li>
       </ul>
     </nav>

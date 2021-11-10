@@ -2,9 +2,6 @@
 
 This project is about to make CMS for bookstore, is also one of our Microverse project from my portfolio
 
-
-Additional description about the project and its features.
-
 ## Built With
 
 - REACT

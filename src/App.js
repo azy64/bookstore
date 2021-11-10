@@ -14,7 +14,7 @@ function App() {
         <h1>CMS</h1>
         <NavBar />
         <Routes>
-          <Route element={<Book />} path="/" />
+          <Route exact element={<Book />} path="/" />
           <Route path="/categories" element={<Categories />} />
           <Route path="*" element={NoWhere} />
         </Routes>
