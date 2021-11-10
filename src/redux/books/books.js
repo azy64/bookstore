@@ -7,6 +7,10 @@ const initState = {
   books: [],
   counter: 1,
 };
+const remove = (tab = [], id) => {
+  const newBooks = tab.filter((book) => book.id !== id);
+  return newBooks;
+};
 
 const bookReducer = (state = initState, action = {}) => {
   switch (action.type) {
@@ -17,7 +21,8 @@ const bookReducer = (state = initState, action = {}) => {
       }
       return state;
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.book.id);
+      // const newState = state.books.filter((book) => book.id !== action.id);
+      return { ...state, books: remove(state.books, action.id) };
     default:
       return state;
   }
@@ -27,7 +32,7 @@ export function addBook(book) {
   return { type: ADD_BOOK, book };
 }
 
-export function removeBook(book) {
-  return { type: REMOVE_BOOK, book };
+export function removeBook(id) {
+  return { type: REMOVE_BOOK, id };
 }
 export default bookReducer;

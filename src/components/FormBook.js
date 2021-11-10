@@ -14,7 +14,8 @@ class FormBook extends Component {
     const title = document.querySelector('#title');
     const author = document.querySelector('#author');
     if (title.value && author.value) {
-      const { counter } = this.props;
+      const { props } = this;
+      const { counter } = props.bookReducer;
       const book = {
         title: title.value,
         author: author.value,
@@ -46,7 +47,7 @@ class FormBook extends Component {
   }
 }
 FormBook.propTypes = {
-  counter: PropTypes.number.isRequired,
+  bookReducer: PropTypes.instanceOf(Object).isRequired,
   dispatch: PropTypes.instanceOf(Function).isRequired,
 };
 const mapStateToProps = (state) => state;
