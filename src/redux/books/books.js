@@ -8,10 +8,6 @@ const initState = {
   savedBooks: [],
   counter: 1,
 };
-/* const remove = (tab = [], id) => {
-  const newBooks = tab.filter((book) => book.id !== id);
-  return newBooks;
-}; */
 export const normalizeData = (data = {}) => {
   const tab = [];
   const tmp = Object.entries(data);
