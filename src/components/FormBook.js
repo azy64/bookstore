@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addBook } from '../redux/books/books';
+import { saveBook, increment, normalizeData } from '../redux/books/books';
 
 class FormBook extends Component {
   constructor(props) {
@@ -15,14 +15,19 @@ class FormBook extends Component {
     const author = document.querySelector('#author');
     if (title.value && author.value) {
       const { props } = this;
-      const { counter } = props.bookReducer;
+      const { dispatch } = this.props;
+      // dispatch(getDataFromApi());
+      // dispatch(incrementCounter());
+      const { books } = props.bookReducer;
       const book = {
         title: title.value,
         author: author.value,
-        id: counter,
+        item_id: increment(normalizeData(books)) + 1,
+        category: 'fiction',
       };
-      const { dispatch } = this.props;
-      dispatch(addBook(book));
+      dispatch(saveBook(book));
+      // dispatch(saveBook(book));
+      // dispatch(addBook(book));
       title.value = '';
       author.value = '';
     }

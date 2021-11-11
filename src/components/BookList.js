@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../redux/books/books';
+import { getDataFromApi, removeOneBook, normalizeData } from '../redux/books/books';
 
 class BookList extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    const { dispatch } = this.props;
+    dispatch(getDataFromApi());
   }
 
   displayBOOKS = () => {
     const tmp = [];
-    // console.log(this.props);
     const { props } = this;
     const { books } = props.bookReducer;
-    books.map((item) => {
+    const temp = normalizeData(books);
+    temp.map((item) => {
       tmp.push(
         <div key={item.id}>
           <span>
@@ -32,7 +34,7 @@ class BookList extends Component {
   remove = (e) => {
     const id = parseInt(e.target.id, 10);
     const { dispatch } = this.props;
-    dispatch(removeBook(id));
+    dispatch(removeOneBook(`${id}`));
   }
 
   render() {
