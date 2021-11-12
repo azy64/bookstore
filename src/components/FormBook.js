@@ -35,16 +35,17 @@ class FormBook extends Component {
 
   render() {
     return (
-      <div>
-        <form>
+      <div className="form">
+        <h2 className="form-title">ADD NEW BOOK</h2>
+        <form className=" grid col-3-auto">
           <div id="book_title">
-            <input type="text" aria-labelledby="book_title" id="title" placeholder="Book title" />
+            <input className="form-input" type="text" aria-labelledby="book_title" id="title" placeholder="Book title" />
           </div>
           <div id="book_author">
-            <input type="text" aria-labelledby="book_title" placeholder="Book Author" id="author" />
+            <input type="text" className="form-input" aria-labelledby="book_title" placeholder="Book Author" id="author" />
           </div>
-          <div id="save">
-            <button type="button" onClick={this.save}>Save</button>
+          <div id="save" className="text-end">
+            <button type="button" className="btn btn-primary" onClick={this.save}>ADD BOOK</button>
           </div>
         </form>
       </div>

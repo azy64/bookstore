@@ -12,7 +12,6 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <h1>CMS</h1>
         <NavBar />
         <Routes>
           <Route exact element={<Book />} path="/" />

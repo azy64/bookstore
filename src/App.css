@@ -1,7 +1,288 @@
+body {
+  background: #f5f6fa;
+}
+
+.white {
+background-color: white;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .App {
   text-align: center;
 }
 
+.grid {
+  display: grid;
+}
+
+.col-3 {
+  grid-template-columns: 25% 67% 8%;
+}
+
+.col-3-auto {
+  grid-template-columns: 50% 25% 1fr;
+}
+
+.col-2 {
+  grid-template-columns: auto auto;
+}
+
+.d-b {
+  display: block;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.border-gray {
+  border: 1px solid grey;
+}
+
 .menu {
   width: 100%;
+  padding: 2% 0% 2%;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.Bookstore-CMS {
+  width: 100%;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: Montserrat;
+  font-size: 1.999rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  line-height: 150%;
+  padding: 2%;
+  text-align: end;
+}
+
+.link {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link li {
+  padding-left:5px;
+  padding-right: 5px;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  display: inline-block;
+  text-align: center;
+}
+
+.link li a {
+  display: block;
+  text-decoration: none;
+  color: gray;
+}
+
+.active {
+  color: #121212 !important;
+}
+
+.oval {
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.shadow-bottom {
+  box-shadow: 0 1px 6px gray;
+}
+
+.book {
+  width: 80%;
+  margin-bottom: 6px;
+  margin: auto;
+  margin-top: 6px;
+  border-radius: 5px;
+  padding: 6px;
+
+}
+
+.m {
+  margin: 10px !important;
+}
+
+.book .title {
+  width: 100%;
+  height: 1.813rem;
+  font-family: RobotoSlab;
+  font-size: 1.675rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.btn {
+  border: none;
+  padding: 12px 10px 12px 10px;
+  min-width: 150px;
+
+}
+
+.btn-primary {
+  background-color: #0290ff;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.form {
+  width:80%;
+  margin: auto;
+}
+
+.form-input {
+  height: 30px;
+  width: 90%;
+  font-family: Montserrat;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  border: 1px soild #e8e8e8;
+}
+
+.form-title {
+  color: #888888;
+  font-family: Montserrat;
+  font-size: 2.15rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+}
+
+.group-link {
+  width: 100%;
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+
+.group-link .btn-link {
+  border: none;
+  padding: 10px;
+  color:  #4386bf;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.author {
+  color:  #4386bf;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.blr {
+  border-left: 1px solid #726f6f !important ;
+  padding: 0 10px 0 10px !important;
+  border-right: 1px solid #726f6f !important;
+}
+
+.category {
+  color: gray;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 1px !important;
+}
+
+.p {
+  padding: 10px;
+
+}
+.current-chap {
+  color: gray;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.percent {
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  margin-bottom: 0;
+}
+
+.completed {
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  transition: position 1s, left 1s, top 1s;
+}
+
+@media screen and (max-width:700px) {
+  
+  .col-3-auto {
+    grid-template-columns: auto !important;
+    grid-column-gap: 6px;
+  }
+
+  .col-3 {
+    grid-template-columns: auto !important;
+    grid-row-gap: 6px;
+  }
+
+  .form-input {
+    margin-bottom: 8px;
+  }
 }
