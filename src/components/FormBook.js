@@ -24,8 +24,6 @@ class FormBook extends Component {
         category: 'fiction',
       };
       dispatch(saveBook(book));
-      // dispatch(saveBook(book));
-      // dispatch(addBook(book));
       title.value = '';
       author.value = '';
     }

@@ -62,8 +62,6 @@ class BookList extends Component {
   }
 
   render() {
-    // this.displayBOOKS();
-    // const { books } = this.props;
     return (
       <div>
         {
