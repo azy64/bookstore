@@ -19,7 +19,7 @@ class BookList extends Component {
     const temp = normalizeData(books);
     temp.map((item) => {
       tmp.push(
-        <div key={item.id} className="book white shadow-bottom grid col-3-auto border-gray">
+        <div key={item.id} className="book white shadow-bottom grid col-3-auto border-gray" style={{ marginBottom: 10 }}>
           <div>
             <h3 className="m category">
               {item.category}

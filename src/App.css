@@ -2,8 +2,18 @@ body {
   background: #f5f6fa;
 }
 
+@font-face {
+  font-family: RobotoSlab;
+  src: url('./font/RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('./font/Montserrat-Regular.ttf');
+}
+
 .white {
-background-color: white;
+  background-color: white;
 }
 
 .text-end {
@@ -58,12 +68,11 @@ background-color: white;
   width: 100%;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.999rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
   line-height: 150%;
@@ -78,11 +87,11 @@ background-color: white;
 }
 
 .link li {
-  padding-left:5px;
+  padding-left: 5px;
   padding-right: 5px;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -117,12 +126,9 @@ background-color: white;
 
 .book {
   width: 80%;
-  margin-bottom: 6px;
   margin: auto;
-  margin-top: 6px;
   border-radius: 5px;
   padding: 6px;
-
 }
 
 .m {
@@ -132,7 +138,7 @@ background-color: white;
 .book .title {
   width: 100%;
   height: 1.813rem;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.675rem;
   font-weight: bold;
   font-stretch: normal;
@@ -146,7 +152,6 @@ background-color: white;
   border: none;
   padding: 12px 10px 12px 10px;
   min-width: 150px;
-
 }
 
 .btn-primary {
@@ -157,14 +162,14 @@ background-color: white;
 }
 
 .form {
-  width:80%;
+  width: 80%;
   margin: auto;
 }
 
 .form-input {
   height: 30px;
   width: 90%;
-  font-family: Montserrat;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -172,12 +177,12 @@ background-color: white;
   line-height: normal;
   letter-spacing: -0.15px;
   color: #c4c4c4;
-  border: 1px soild #e8e8e8;
+  border: 1px solid #e8e8e8;
 }
 
 .form-title {
-  color: #888888;
-  font-family: Montserrat;
+  color: #888;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2.15rem;
   font-weight: bold;
   font-stretch: normal;
@@ -195,7 +200,7 @@ background-color: white;
 .group-link .btn-link {
   border: none;
   padding: 10px;
-  color:  #4386bf;
+  color: #4386bf;
   background-color: transparent;
   cursor: pointer;
   font-size: 0.875rem;
@@ -203,7 +208,7 @@ background-color: white;
 }
 
 .author {
-  color:  #4386bf;
+  color: #4386bf;
   background-color: transparent;
   cursor: pointer;
   font-size: 0.875rem;
@@ -211,7 +216,7 @@ background-color: white;
 }
 
 .blr {
-  border-left: 1px solid #726f6f !important ;
+  border-left: 1px solid #726f6f !important;
   padding: 0 10px 0 10px !important;
   border-right: 1px solid #726f6f !important;
 }
@@ -228,8 +233,8 @@ background-color: white;
 
 .p {
   padding: 10px;
-
 }
+
 .current-chap {
   color: gray;
 }
@@ -239,7 +244,7 @@ background-color: white;
 }
 
 .percent {
-  font-family: Montserrat;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -252,7 +257,7 @@ background-color: white;
 
 .completed {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
@@ -266,12 +271,16 @@ background-color: white;
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 100;
   background-color: white;
   transition: position 1s, left 1s, top 1s;
 }
 
-@media screen and (max-width:700px) {
-  
+.m-b {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
   .col-3-auto {
     grid-template-columns: auto !important;
     grid-column-gap: 6px;

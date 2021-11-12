@@ -35,7 +35,7 @@ class FormBook extends Component {
 
   render() {
     return (
-      <div className="form">
+      <div className="form m-b">
         <h2 className="form-title">ADD NEW BOOK</h2>
         <form className=" grid col-3-auto">
           <div id="book_title">
