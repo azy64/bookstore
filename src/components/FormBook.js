@@ -16,8 +16,6 @@ class FormBook extends Component {
     if (title.value && author.value) {
       const { props } = this;
       const { dispatch } = this.props;
-      // dispatch(getDataFromApi());
-      // dispatch(incrementCounter());
       const { books } = props.bookReducer;
       const book = {
         title: title.value,
